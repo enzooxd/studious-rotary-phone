@@ -1,0 +1,306 @@
+/* Resetando estilos padrões */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #f7f7f7; /* Cor de fundo clara */
+  color: #333; /* Texto escuro para contraste */
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  transition: all 0.3s ease;
+}
+
+/* Container centralizado */
+.container {
+  width: 90%;
+  max-width: 1200px; /* Corrigido para um tamanho de container mais adequado */
+  margin: 0 auto;
+}
+
+/* Cabeçalho */
+header {
+ background: linear-gradient(135deg, #2a3e9f, #0a3c59 70%, #fff 100%); /* Gradiente mais escuro */
+  padding: 10px 0; /* Ajuste na altura do cabeçalho */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  border-bottom: 5px solid rgba(0, 0, 0, 0.1); /* Linha sutil para separar do conteúdo */
+}
+
+/* Menu de ícones (Hamburguer) */
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  position: absolute;
+  left: 30px;
+}
+
+.menu-icon span {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  transition: 0.3s;
+}
+
+/* Logo centralizada */
+header .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+header .logo img {
+  width: 180px; /* Ajusta o tamanho da logo */
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Barra de pesquisa */
+.search-bar {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 10px; /* Bordas bem arredondadas */
+  border: 1px solid #ccc;
+  width: 250px;
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.5; /* Opacidade baixa */
+  background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com opacidade */
+  transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.search-bar:focus {
+  width: 300px;
+  outline: none;
+  border-color: #36d1dc;
+  opacity: 1; /* Opacidade normal ao focar */
+}
+
+/* Navegação */
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 12px 25px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #fff;
+  color: #333; /* Texto escuro no hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+/* Área Principal */
+main {
+  padding: 60px 0;
+  background: #f7f7f7; /* Fundo claro e clean */
+}
+
+main h2 {
+  font-size: 3rem;
+  color: #333;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+main h2 img {
+  display: block;
+  margin: 0 auto; /* Centraliza a imagem */
+}
+
+section p {
+  font-size: 1.1rem;
+  color: #666;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.card {
+  background-color: #fff; /* Cards brancos */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  width: 30%;
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15); /* Sombra mais intensa no hover */
+}
+
+.card h3 {
+  color: #333;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-family: 'Orbitron', sans-serif; /* Fonte futurista */
+}
+
+.card p {
+  font-size: 1.1rem;
+  color: #777;
+}
+
+/* Botão de Voltar ao Topo */
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #36d1dc;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+  transition: all 0.3s ease;
+}
+
+#back-to-top:hover {
+  background-color: #6a7dff;
+}
+
+/* Modal de Contato */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  width: 50%;
+  text-align: center;
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.modal-content input,
+.modal-content textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.modal-content button {
+  background-color: #36d1dc;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background-color: #6a7dff;
+}
+
+/* Rodapé */
+footer {
+  background-color: #fff;
+  color: #333;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    display: none;
+  }
+
+  .menu-icon {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  header .logo h1 {
+    font-size: 2rem;
+  }
+
+  nav ul li a {
+    font-size: 1rem;
+    padding: 8px 12px;
+  }
+
+  .search-bar {
+    width: 180px;
+  }
+}
